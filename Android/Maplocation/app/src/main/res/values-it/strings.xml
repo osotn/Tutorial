@@ -1,0 +1,5 @@
+<resources>
+    <string name="show_map_string">Mostra la mappa</string>
+    <string name="location_string">Digita l\'indirizzo</string>
+<string name="app_name">Maplocation</string>
+</resources>
