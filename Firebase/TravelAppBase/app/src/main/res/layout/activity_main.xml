@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/githubURL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Github sources: https://TODO\n" />
+
+    <TextView
+        android:id="@+id/firebaseURL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/FIREBASE_URL" />
+
+    <TextView
+        android:id="@+id/points"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Points: " />
+
+
+    <TextView
+        android:id="@+id/debug"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Debug: " />
+
+    <Button
+        android:id="@+id/update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/update_button" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/editNumber"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:maxLength="2"
+            android:inputType="numberDecimal"
+            android:digits="0123456789"
+            android:text="1" />
+
+        <EditText
+            android:id="@+id/editDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

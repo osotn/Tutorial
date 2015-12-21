@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">TravelApp Map Points</string>
+    <string name="update_button">Update</string>
+    <string name="FIREBASE_URL">https://blazing-fire-6094.firebaseio.com/</string>
+
+
+</resources>
