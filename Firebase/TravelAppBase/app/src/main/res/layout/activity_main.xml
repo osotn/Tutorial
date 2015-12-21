@@ -9,7 +9,7 @@
         android:id="@+id/githubURL"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Github sources: https://TODO\n" />
+        android:text="Github sources: https://github.com/osotn/Tutorial/tree/master/Firebase/TravelAppBase\n" />
 
     <TextView
         android:id="@+id/firebaseURL"
@@ -21,9 +21,8 @@
         android:id="@+id/points"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Points: " />
-
-
+        android:text="\nPoints: " />
+    
     <TextView
         android:id="@+id/debug"
         android:layout_width="match_parent"
