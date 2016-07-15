@@ -1,0 +1,1 @@
+include ':app', ':com.felhr', ':com.felhr.deviceids', ':com.felhr.usbserial'

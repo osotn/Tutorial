@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <usb-device vendor-id="1317" product-id="42156" />
+
+    <usb-device vendor-id="1917" product-id="1040" /> <!-- Knob device -->
+    <usb-device vendor-id="9025" product-id="67" /> <!-- Arduino Uno USB -->
+    <usb-device vendor-id="1027" product-id="24577" /> <!-- Arduino Uno - FTDI  device-->
+</resources>

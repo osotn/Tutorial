@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/USB_hid_and_serial.iml" filepath="$PROJECT_DIR$/USB_hid_and_serial.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/com.felhr/com.felhr.iml" filepath="$PROJECT_DIR$/com.felhr/com.felhr.iml" />
+      <module fileurl="file://$PROJECT_DIR$/com.felhr.deviceids/com.felhr.deviceids.iml" filepath="$PROJECT_DIR$/com.felhr.deviceids/com.felhr.deviceids.iml" />
+      <module fileurl="file://$PROJECT_DIR$/com.felhr.usbserial/com.felhr.usbserial.iml" filepath="$PROJECT_DIR$/com.felhr.usbserial/com.felhr.usbserial.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">USB_hid_and_serial</string>
+    <string name="text_button">Detect USB</string>
+    <string name="data_button">Get Data</string>
+    <string name="text_camera_mode">Camera Mode:</string>
+    <string name="mode_1">1</string>
+    <string name="mode_2">2</string>
+</resources>
