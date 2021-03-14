@@ -1,0 +1,6 @@
+not.v
+and.v
+or.v
+xor.v
+mux.v
+dmux.v

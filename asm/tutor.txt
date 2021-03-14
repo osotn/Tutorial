@@ -1,0 +1,165 @@
+
+nasm -f elf32 file.asm -o file.o [-g]
+ld -m elf_i386 file.o -o file
+
+== gdb ==
+
+(gdb) run / r
+(gdb) list 0 / l
+(gdb) disassemble
+(gdb) info registers / i r
+(gdb) d N 
+(gdb) info break
+(gdb) s/n/u
+
+In 1973 Intel introduced the 8080 microprocessor.
+About 6 months late Motorola introduced MC6800.
+
+Intel 8080:
+	500,000 instructions per second;
+	64K bytes address
+	
+	* The first PC MITS Altair 8800 in 1974.
+
+In 1978 Intel released the 8088 microprocessor.
+	* 16 bits
+	* 2,5 million instruction per second
+	* 1 MB memory
+
+	* IBM PC in 1981 on 8088
+
+In 1983 Intel 80286
+	* 16MByte
+	* 4 MIPs - 8.0 MHz
+
+In 1986 Intel 80386 
+	* 32-bit
+	* 4GB memory, MMU
+	* GUI VGA (640x480)
+	
+In 1989 Intel 80486
+	* 8K byte cache
+	* 50 MHz - 33-66 MHz
+
+In 1993 Pentium
+	*60, 66MHz, 110 MIPs
+	* 16k byte cache
+
+Programming model Intel 8086:
+
+                               AX
+             .-----------------------.
+	EAX  |             | AH | AL | Accumulator
+             .-----------------------.
+                               BX
+             .-----------------------.
+	EBX  |             | BH | BL | Base index
+             .-----------------------.
+                               CX
+             .-----------------------.
+	ECX  |             | CH | CL | Count
+             .-----------------------.
+                               DX
+             .-----------------------.
+	EDX  |             | DH | DL | Data
+             .-----------------------.
+
+             .-----------------------.
+	ESP  |             |   SP    | Stack pointer
+             .-----------------------.
+             .-----------------------.
+	EBP  |             |   BP    | Base pointer 
+             .-----------------------.
+             .-----------------------.
+	EDI  |             |   DI    | Dst index
+             .-----------------------.
+             .-----------------------.
+	ESI  |             |   SI    | Src index 
+             .-----------------------.
+
+
+
+             .-----------------------.
+	EIP  |             |   IP    | Instruction pointer
+             .-----------------------.
+             .-----------------------.
+    EFLAGS   |             | FLAGS   | Flags
+             .-----------------------.
+
+		C (carry)
+		P (parity)
+		Z (zero)
+		S (sign)
+		T (trap)
+		I (interrupt)
+		O (overflow)
+
+		IOPL (I/O privilege level) 0-3
+
+	Segment registers:
+		CS (code)
+
+
+ == REAL mode memory addressing ==
+
+8086/8088 only operate in the real mode;
+	* 1 MBytes
+>=80286 operate in either the real or protected mode.
+	* Only from Windows 95 and for 32 bits.
+
+
+Real mode: 20 bit
+	Segment address + Offset address
+
+	1M =	  4bit  +   0000 (16 bits) = 64K
+
+
+=== Protected mode memory addressing ===
+
+SR contains a selector that selects a descriptor from a descriptor table.
+The descriptor describes the memory segment's location, length, and access rights.
+Select one of 8,192 descriptors from one of two tables: global and local descriptors.
+16,384 memory segments.
+	* base address - 32 bits.
+	* segment limit 19-00,  G (granularity bit) 4K, AV - available, D - mode
+	* Access rights
+
+=== Memory paging ===
+
+>=80386 - linear address that translates in physical address.
+Control Registers - CR0-CR3.
+
+CR0: bit PG=0 - physical address, PG=1 address translation.
+CR3: base address and PCD, PWT.
+
+
+TLB = translation look-aside buffer.
+
+
+
+==== Addressing Modes ====
+
+MOV (move data) instruction.
+
+Data-addressing mode:
+	* register;			MOV CX, DX   ; CX <- DX.
+	* immediate;			MOV AL, 22H  ; AL <- *(22H)
+	* direct;			MOV AL, 22H  ; AL <- 22H
+	* register indirect;		MOV AX, [BX] ; AX <- *(BX)  -- B,D,S
+	* base-plus-index;		MOV [EAX+EBX], CL;
+	* register relative;		MOV AX, [BX+4]
+	* base relative-plus-index.     MOV AX, [Bx+DI+4]
+	* scaled-index addressing	MOV EDX, [EAX + 4*EBX]
+
+MOV dst src
+
+opcode = operation code
+operation [opcode1] [opcode2]
+
+
+Assemblers:
+	* Intel ASM
+	* Microsoft MASM
+	* Borland TASM
+
+

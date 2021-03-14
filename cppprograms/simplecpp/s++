@@ -1,0 +1,2 @@
+#!/bin/sh -x
+g++ $@ -Wall /home/osotn/gitspace/tutorial/cppprograms/simplecpp/lib/libsprite.a -I/home/osotn/gitspace/tutorial/cppprograms/simplecpp/include -I/usr/include/X11 -L/usr/X11R6/lib -lX11 -std=c++11

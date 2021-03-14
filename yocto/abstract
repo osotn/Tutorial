@@ -1,0 +1,20 @@
+Yocto project build system overview
+
+Poky = BitBake + metadata
+
+Poky - build system used by the Yocto Project
+BitBake - a task executor and scheduler
+Metadata - task definitions
+	- Configuration (.conf) - global definition of variables;
+	- Classes (.bbclass) - encapsulation and inheritance of build logic, packaging, etc.
+	- Recipes (.bb) - the logic units of software/images to build.
+
+A recipe is a set of instructions for building packages, including:
+	- Where to obtain the upstream sources and which patches to apply;
+	- Dependencies (on libraries or other recipes)
+	- Configuration/compilation options
+	- Define what files go into what output packages
+
+Workflow
+
+
