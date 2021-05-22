@@ -32,6 +32,11 @@ void insert(int data, int n)
     }        
 }
 
+void delete()
+{
+    
+}
+
 void print() {
     printf("List is ");
     struct Node* temp = head;
@@ -48,5 +53,7 @@ int main() {
     insert(1, 0);
     insert(2, 1);
     insert(5, 2);
+    print();
+    delete(1);
     print();
 }
