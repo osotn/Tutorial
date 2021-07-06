@@ -9,7 +9,7 @@ const int DELAY_TIME = 1000.0f / FPS;
 int main()
 {
     std::cout << "game init attempt...\n";
-    if (TheGame::Instance()->init("Chapter 3: Working with Game Objects",
+    if (TheGame::Instance()->init("Chapter 4: Exploring Movement and Input Handling",
                                   SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
                                   640, 480, SDL_WINDOW_SHOWN))
     {
