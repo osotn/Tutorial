@@ -1,6 +1,7 @@
 # Налаштування компілятора та інструментів
 CC = ia16-elf-gcc
-LD = ia16-elf-ld
+#LD = ia16-elf-ld
+LD = ld -m elf_i386
 OBJCOPY = ia16-elf-objcopy
 
 # Прапорці компіляції
@@ -33,7 +34,7 @@ clean:
 # Запуск у QEMU (зручно для тестів)
 run: $(TARGET)
 	qemu-system-x86_64 \
-  -bios ../../../coreboot/build/coreboot.rom \
+  -bios ../../../../coreboot/build/coreboot.rom \
   -drive file=boot.bin,format=raw,if=none,id=drive0 \
   -device ide-hd,drive=drive0,cyls=1,heads=1,secs=1 \
   -serial stdio
