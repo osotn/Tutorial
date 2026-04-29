@@ -1,0 +1,28 @@
+	mov ah, 0x0e
+
+	mov al, 'H'
+	int 0x10
+	mov al, 'e'
+	int 0x10
+	mov al, 'l'
+	int 0x10
+	mov al, 'l'
+	int 0x10
+	mov al, 'o'
+	int 0x10
+
+	mov bx, the_secret
+	add bx, 0x7c00
+	mov al, [bx]
+	int 0x10
+
+
+loop:
+	jmp loop
+
+the_secret:
+	db 'X'
+
+times 510 - ($ - $$) db 0
+
+dw 0xAA55
