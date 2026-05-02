@@ -3,7 +3,8 @@ SECTIONS
     . = 0x9000;
     
     .kernel_sector : {
-        kernel_main.o(*)
+        kernel_entry.o(*)    /* Must be the first */
+/*        kernel_main.o(*) */
         *(.text*)
         *(.rodata*)
         *(.data*)
